@@ -1,0 +1,16 @@
+{
+  "name": "lumen-vue-pwa",
+  "version": "1.0.0",
+  "description": "Starter for Lumen and Vue-cli",
+  "scripts": {
+    "start": "node scripts/start",
+    "install": "node scripts/install",
+    "serve": "node scripts/serve",
+    "build": "node scripts/build"
+  },
+  "author": "Awsaf Anam",
+  "license": "ISC",
+  "dependencies": {
+    "rimraf": "^2.6.2"
+  }
+}

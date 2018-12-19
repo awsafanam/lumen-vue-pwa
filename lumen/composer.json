@@ -1,0 +1,56 @@
+{
+    "name": "albertcht/lumen-vue-starter",
+    "description": "A Lumen-Vue SPA starter project template.",
+    "keywords": ["vue", "laravel", "lumen", "starter", "template"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=7.1",
+        "laravel/lumen-framework": "5.6.*",
+        "vlucas/phpdotenv": "~2.2",
+        "laravel/socialite": "^3.0",
+        "guzzlehttp/guzzle": "^6.3",
+        "unisharp/laravel-jwt": "^0.2.6",
+        "mlntn/lumen-artisan-serve": "^1.2",
+        "vluzrmos/tinker": "dev-master",
+        "albertcht/lumen-form-request": "^2.3",
+        "albertcht/lumen-helpers": "dev-master",
+        "illuminate/mail": "^5.6",
+        "illuminate/notifications": "^5.6",
+        "ramsey/uuid": "^3.7"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "~1.0",
+        "phpunit/phpunit": "~6.0",
+        "codedungeon/phpunit-result-printer": "^0.4.4",
+        "albertcht/lumen-testing": "^0.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "app/Helpers/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/",
+            "database/"
+        ]
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "php artisan jwt:secret --force"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "optimize-autoloader": true
+    }
+}
